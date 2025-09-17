@@ -25,39 +25,37 @@
 
 **Need to choose a secret organization pattern quickly? Start here:**
 
-```
-+-- How many teams/services do you have? --+
-|                                          |
-+-- 1-3 teams, simple apps                |
-|   +-- Use: Environment-First             |
-|   |   Pattern: /{env}/{service}/{resource}/{secret} |
-|   |   Example: /prod/api/postgres/service-account-password  |
-|                                          |
-+-- 4-10 teams, multiple products         |
-|   +-- Use: Service-First or Domain-First |
-|   |   Pattern: /{service}/{env}/{resource}/{secret} |
-|   |   Example: /user-service/prod/postgres/service-account-password |
-|                                          |
-+-- 10+ teams, multiple business units    |
-|   +-- Use: Organization-First            |
-|   |   Pattern: /{org}/{env}/{service}/{resource}/{secret} |
-|   |   Example: /payments-bu/prod/billing/stripe/key |
-|                                          |
-+-- Multi-tenant/SaaS platform            |
-|   +-- Use: Tenant-First                  |
-|   |   Pattern: /{tenant}/{env}/{service}/{resource}/{secret} |
-|   |   Example: /customer-a/prod/crm/db/service-account-password |
-|                                          |
-+-- High-security/compliance requirements |
-|   +-- Use: Classification-First          |
-|   |   Pattern: /{classification}/{env}/{service}/{resource}/{secret} |
-|   |   Example: /pci/prod/payment/encryption/key |
-|                                          |
-+-- DevOps-focused, clear team ownership  |
-|   +-- Use: Team-First                    |
-|   |   Pattern: /{team}/{env}/{service}/{resource}/{secret} |
-|   |   Example: /platform-team/prod/monitoring/grafana/admin-password |
-```
+**How many teams/services do you have?**
+
+**1-3 teams, simple apps**
+- **Use:** Environment-First
+- **Pattern:** `/{env}/{service}/{resource}/{secret}`
+- **Example:** `/prod/api/postgres/service-account-password`
+
+**4-10 teams, multiple products**
+- **Use:** Service-First or Domain-First
+- **Pattern:** `/{service}/{env}/{resource}/{secret}`
+- **Example:** `/user-service/prod/postgres/service-account-password`
+
+**10+ teams, multiple business units**
+- **Use:** Organization-First
+- **Pattern:** `/{org}/{env}/{service}/{resource}/{secret}`
+- **Example:** `/payments-bu/prod/billing/stripe/key`
+
+**Multi-tenant/SaaS platform**
+- **Use:** Tenant-First
+- **Pattern:** `/{tenant}/{env}/{service}/{resource}/{secret}`
+- **Example:** `/customer-a/prod/crm/db/service-account-password`
+
+**High-security/compliance requirements**
+- **Use:** Classification-First
+- **Pattern:** `/{classification}/{env}/{service}/{resource}/{secret}`
+- **Example:** `/pci/prod/payment/encryption/key`
+
+**DevOps-focused, clear team ownership**
+- **Use:** Team-First
+- **Pattern:** `/{team}/{env}/{service}/{resource}/{secret}`
+- **Example:** `/platform-team/prod/monitoring/grafana/admin-password`
 
 **Still unsure?** Jump to the [Strategic Decision Framework](#strategic-decision-framework) for detailed analysis.
 
