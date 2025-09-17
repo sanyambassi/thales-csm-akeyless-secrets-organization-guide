@@ -19,81 +19,43 @@
 | **High-security** | Compliance requirements | Classification-First | `/pci/prod/payment/encryption/key` |
 | **DevOps-focused** | Clear team ownership | Team-First | `/platform-team/prod/monitoring/grafana/admin-password` |
 
-## Contents
+## What's Inside
 
-This guide provides:
+- **Quick Decision Tree** - Choose the right pattern for your organization
+- **Core Patterns** - 6 essential organizational patterns with examples
+- **Naming Conventions** - Best practices for consistent secret naming
+- **Implementation Guide** - Simple steps to get started
+- **Akeyless CLI Commands** - Essential commands for secret management
+- **Best Practices** - Key principles for success
 
-- **Decision Framework** - Pattern selection based on organizational structure
-- **Organizational Patterns** - Environment-first, service-first, organization-first, and specialized patterns
-- **Advanced Strategies** - Hybrid approaches, lifecycle management, and compliance considerations
-- **Implementation Examples** - E-commerce, SaaS, and financial services architectures
-- **Migration Strategies** - 5-phase approach for restructuring existing secret hierarchies
-- **Akeyless CLI Commands** - Essential commands for secret management and migration
-- **Best Practices** - Naming conventions, access control patterns, and common anti-patterns
+## Quick Examples
 
-## Target Audience
-
-- DevOps engineers implementing secret management systems
-- Security teams establishing compliance frameworks
-- Platform teams building multi-tenant architectures
-- Organizations scaling from simple to complex secret hierarchies
-
-## Quick Reference
-
-### Small Teams (1-10 people)
+**Small Teams (1-10 people)**
 ```bash
-# Environment-First Pattern
-/prod/api/database/password
+/prod/api/database/service-account-password
 /prod/api/jwt-secret
-/staging/api/database/password
+/staging/api/database/service-account-password
 ```
 
-### Growing Teams (10-50 people)
+**Growing Teams (10-50 people)**
 ```bash
-# Service-First Pattern
-/user-service/prod/database/password
-/payment-service/prod/external/stripe-key
+/user-service/prod/database/service-account-password
+/payment-service/prod/external/stripe-secret-key
 /notification-service/prod/internal/jwt-secret
 ```
 
-### Enterprise (50+ people)
+**Enterprise (50+ people)**
 ```bash
-# Organization-First Pattern
 /payments-bu/prod/billing-service/stripe/secret-key
 /identity-bu/prod/auth-service/oauth/client-secret
 /shared/prod/encryption/master-key
 ```
 
-## Automation Tools
-
-The guide includes production-ready scripts for:
-
-- **Path Validation** - Ensure naming conventions and structure
-- **Migration Tools** - Move secrets between organizational patterns
-- **Compliance Auditing** - Check for PCI, HIPAA, GDPR violations
-- **Lifecycle Management** - Rotate, deprecate, and cleanup secrets
-- **Path Analysis** - Get recommendations for your current setup
-
-## Repository Structure
-
-```
-thales-csm-akeyless-secrets-organization-guide/
-├── README.md                                    # This file - quick start and overview
-├── ENHANCED_SECRET_VAULT_ORGANIZATION_GUIDE.md  # Complete comprehensive guide
-├── LICENSE                                      # MIT License
-```
-
 ## Full Guide
 
-**[Read the Complete Guide](secrets_organization_guide.md)**
+**[Read the Complete Guide](ENHANCED_SECRET_VAULT_ORGANIZATION_GUIDE.md)**
 
-The complete guide includes:
-- Detailed decision matrices
-- Comprehensive examples for every pattern
-- Step-by-step migration strategies
-- Enterprise considerations (M&A, compliance, multi-tenancy)
-- Advanced automation scripts
-- Real-world case studies
+A streamlined 200-line guide with everything you need to organize secrets effectively.
 
 ## Contributing
 
