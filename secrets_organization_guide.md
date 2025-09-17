@@ -154,17 +154,13 @@ Consider the trade-offs of path depth:
 /prod/user-service/redis/session-key
 ```
 
----
+**Deep Paths (6+ levels)**
 
-> ## ⚠️ Deep Paths (6+ levels) - Use with Extreme Caution
-> 
-> - **Pros:** Maximum organization and granularity
-> - **Cons:** Complex, harder to navigate, **🚨 HIGH RISK of over-engineering**
-> - **⚠️ WARNING:** Only use if you have 100+ secrets and complex compliance requirements
-> - **Good for:** Large enterprises, complex compliance requirements
-> - **🚫 Anti-pattern:** Avoid unless absolutely necessary - most organizations don't need this complexity
-
----
+- **Pros:** Maximum organization and granularity
+- **Cons:** Complex, harder to navigate, **🚨 HIGH RISK of over-engineering**
+- Only use if you have **complex requirements**
+- **Good for:** Large enterprises, complex compliance requirements
+- **Avoid unless absolutely necessary** - most organizations don't need this complexity
 
 ```bash
 /{org}/{region}/{env}/{domain}/{service}/{resource}/{purpose}/{secret}
