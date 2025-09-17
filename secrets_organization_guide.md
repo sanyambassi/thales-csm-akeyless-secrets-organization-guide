@@ -1,5 +1,5 @@
-# Akeyless Secret Organization Guide
-## Strategic and Practical Best Practices for Structuring Secrets in Thales CipherTrust Secrets Manager
+# Thales CipherTrust Secrets Manager Secrets Organization Guide (Short Version)
+## Strategic and Practical Best Practices for Structuring Secrets in Thales CipherTrust Secrets Manager, powered by Akeyless
 
 ### Table of Contents
 1. [Quick Decision Tree](#quick-decision-tree)
