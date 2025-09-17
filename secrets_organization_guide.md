@@ -157,7 +157,7 @@ Consider the trade-offs of path depth:
 **Deep Paths (6+ levels)**
 
 - **Pros:** Maximum organization and granularity
-- **Cons:** Complex, harder to navigate, **🚨 HIGH RISK of over-engineering**
+- **Cons:** Complex, harder to navigate, **HIGH RISK of over-engineering**
 - Only use if you have **complex requirements**
 - **Good for:** Large enterprises, complex compliance requirements
 - **Avoid unless absolutely necessary** - most organizations don't need this complexity
@@ -607,7 +607,6 @@ Organize by secret purpose and usage patterns:
 - **Use lowercase:** `database` not `Database`
 - **Use hyphens (`-`) for multi-word components:** `user-service` not `user_service`
   - **Note:** Hyphens align with modern tech standards (URLs, APIs, containers, cloud resources)
-  - If your vault system requires underscores, use them consistently
 - **Avoid special characters** except hyphens and forward slashes
 - **Keep component names short but meaningful**
 
@@ -719,19 +718,19 @@ Structure paths to align with your access control policies:
 
 ```bash
 # Environment-based access
-/prod/*           → Production teams only
+/prod/*          → Production teams only
 /dev/*           → Developers and above
 /staging/*       → QA and above
 
 # Service-based access
 /*/user-service/*     → User service team
 /*/payment-service/*  → Payment service team + Security team
-/*/admin/*           → Admin team only
+/*/admin/*            → Admin team only
 
 # Organization-based access
 /payments-bu/*       → Payments business unit
 /identity-bu/*       → Identity business unit
-/shared/*           → Platform team + Security team
+/shared/*            → Platform team + Security team
 ```
 
 ### Team-Based Access
