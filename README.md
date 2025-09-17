@@ -53,9 +53,7 @@
 
 ## Full Guide
 
-**[Read the Complete Guide](ENHANCED_SECRET_VAULT_ORGANIZATION_GUIDE.md)**
-
-A streamlined 200-line guide with everything you need to organize secrets effectively.
+**[Read the Complete Guide](secrets_organization_guide.md)**
 
 ## Contributing
 
